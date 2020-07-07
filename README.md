@@ -1,8 +1,6 @@
 # pick_and_place
 it's said "Documentation is a love letter that you write to your future self" so let's start.
 
-Procedure to follow to work on this repository
-
 1. To start working with any manipulator create a workspace 
 $ mkdir catkin_ws
 $ cd catkin_ws
@@ -34,8 +32,8 @@ II. Add "source ~/catkin_ws/source/devel/setup.bash" at the end of .bashrc file.
 Follow this link.
 http://docs.ros.org/melodic/api/moveit_tutorials/html/doc/setup_assistant/setup_assistant_tutorial.html
 
-# Be cautious, finger joints(gripper) have effortJointInterface and link joints have PositionJointInterface.
-# Aviod step 10, as we create our own controller file specifically for kuka210.
+ Be cautious, finger joints(gripper) have effortJointInterface and link joints have PositionJointInterface.
+ Aviod step 10, as we create our own controller file specifically for kuka210.
 
 7. Once moveit package created, we add controllers.yaml file in kuka210_movevit/config directory. another controller file for gazebo also added in kuka210_gazebo named gazebo_controllers.yaml.
 
