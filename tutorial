@@ -1,0 +1,44 @@
+~Report~
+
+1. creating workspace (catkin workspace commnad)
+2. create kuka_arm package with some dependencies (look package file for dependencies)
+3. source devel/setup.bash (or update .bashrc file for permanent solution)
+4. build package(catkin build //catkin-tools required if not installed than install it first)
+5. add urdf file in the kuka_arm/urdf folder with meshes files in meshes folder(kuka_arm/meshes)
+6. create launch files in kuka_arm/launch folder (for clarification if robot spawned in gazebo or not/ "pgain not found" error can be ignored)
+7. create moveit package (follow moveit documentation) 
+
+# Be cautious, finger joints(gripper) have effortJointInterface and link joints have PositionJointInterface.
+8. create pid gain file and load into parameter server.
+9. create control files for both gazebo package and moveit package. 
+
+ros_controllers.launch
+{
+1. commenting ros_controllers.yaml 
+2.adding controllers.yaml 
+3.adding gazebo_controllers.yaml
+4. "arg" parameter modified (args="joint_state_controller arm_controller gripper_controller"), no other parameters are modified.
+
+
+}
+
+10. 
+$ sudo apt-get install ros-noetic-ros-control ros-noetic-ros-controllers
+"ros-control installation"
+http://wiki.ros.org/ros_control
+
+11. kuka_arm_moveit_controller_manager.launch.xml file of kuka210_moveit/launch file modified 
+this file used to upload ros_controller.yaml file to parameter server, Now this .yaml file changed by controller.yaml (resides in kuka210_moveit/config directory).
+
+
+12. now create .world file to launch world in gazebo
+
+13. Adding objects into gazebo: Quite simple yet difficult, add model file into .gazebo directory, create world file by adding world tag and naming it as a .world extension. this .world file reside in world directory of kuka_arm package.
+
+14. Adding a node in any package and modification in cmakelist file
+how to run that node?
+solution: create a launch file to launch newly created node.   
+
+15. Adding a header file and changes to be made in cmakelist.txt
+{include_directories(include ${catkin_INCLUDE_DIRS} ${EIGEN3_INCLUDE_DIRS}) , this added into camkelist.txt file}
+

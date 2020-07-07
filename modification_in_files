@@ -1,0 +1,5 @@
+change made in srdf file 
+(parent_group="kuka_arm") parameter added in gripper group.
+
+After change:
+   <end_effector name="gripper" parent_link="link_6" group="gripper" parent_group="kuka_arm"/>
