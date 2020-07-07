@@ -1,0 +1,6 @@
+<?xml version="2.0"?>
+<launch>
+
+<node name="trajectory_planner" pkg="kuka_arm" type="trajectory_planner" respawn="false" output="screen"/>
+
+</launch>

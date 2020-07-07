@@ -1,0 +1,6 @@
+<?xml version="2.0"?>
+<launch>
+
+<node name="robot_model_and_robot_state" pkg="kuka_arm" type="robot_model_and_robot_state" respawn="false" output="screen"/>
+
+</launch>

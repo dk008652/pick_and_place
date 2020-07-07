@@ -1,0 +1,27 @@
+/kuka_arm/gazebo_ros_control:
+  pid_gains:
+    joint_1: 
+      p: 10000 
+      i: 10 
+      d: 0.5
+    joint_2: 
+      p: 500000 
+      i: 10 
+      d: 0.5
+    joint_3: 
+      p: 500000 
+      i: 50 
+      d: 0.5
+    joint_4: 
+      p: 10000 
+      i: 10 
+      d: 0.5
+    joint_5: 
+      p: 10000 
+      i: 10 
+      d: 0.5
+    joint_6: 
+      p: 10000 
+      i: 10 
+      d: 0.5
+
