@@ -1,11 +1,11 @@
 # pick_and_place
 it's said "Documentation is a love letter that you write to your future self" so let's start.
 
-1. To start working with any manipulator create a workspace 
+To start working with any manipulator create a workspace 
 $ mkdir catkin_ws
 $ cd catkin_ws
 $ mkdir src
-$ catkin build   // This cmd build catkin_ws workspace and endup creating 3 new directories, log, devel, and build.
+$ catkin build   // This cmd will build catkin_ws workspace and endup creating 3 new directories, log, devel, and build.
  
 To build workspace we require catkin-tools package installed in our system, if not installed....
 run $................... 
